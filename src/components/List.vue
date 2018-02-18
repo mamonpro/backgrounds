@@ -1,11 +1,12 @@
 <template lang="pug">
   div
     .list
-      .item.list__item(v-for="(item, index) in images.show" :key="index")
-        a.item__link(:href="source(item.url)" target="_blank")
+      .item.list__item(v-for="(item, index) in images.show", :key="index")
+        a.item__link(:href="source(item.url)", target="_blank")
           img.item__img(:src="source(item.url)")
-    .list__load(v-if="images.show.length != images.all")
-      .list__btn(@click="index = index + 1") Show More
+    .list__load
+      .list__btn(v-if="images.show.length != images.all", @click="index = index + 1, initScroll()") Show More
+      .list__empty(v-else) That's all, folks!
 </template>
 
 <script>
@@ -13,7 +14,8 @@ export default {
   data () {
     return {
       index: 1,
-      perPage: 9
+      perPage: 9,
+      element: null
     }
   },
 
@@ -29,6 +31,23 @@ export default {
   methods: {
     source (url) {
       return (`/static/background/${url}`)
+    },
+
+    initScroll () {
+      this.element = document.querySelector('.list__load')
+      window.addEventListener('scroll', this.handleScroll)
+    },
+
+    handleScroll () {
+      if (this.isEnd(this.element)) {
+        this.index = this.index + 1
+      }
+    },
+
+    isEnd (element) {
+      const rect = element.getBoundingClientRect()
+      const html = document.documentElement
+      return rect.bottom <= (window.innerHeight || html.clientHeight)
     }
   }
 }
