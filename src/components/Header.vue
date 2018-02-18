@@ -1,17 +1,14 @@
 <template lang="pug">
   header.head
-    span.head__logo
-      | background - NAME
-    h1.head__title
-      | Beautiful
-      br
-      | backgrounds
-      br
-      | for your iPhone.
-    .head__social
+    .head__inner
+      h6.head__name bgrnds
+      h1.head__title Beautiful<br/>backgrounds<br/>for your iPhone.
 </template>
 
 <style lang="stylus" scoped>
+
+@require './../assets/styl/variables'
+
 h1
   margin: 0
 
@@ -21,16 +18,25 @@ h1
   width: 100%
   padding: 5rem 0
 
-  &__logo
+  &__inner
+    padding-top: $indent.mobile
+
+    @media screen and (min-width: $media.sm)
+      padding-top: $indent.desktop
+
+  &__name
     font-size: 1.6rem
     text-transform: uppercase
     font-weight: 600
-    color: #AAAAAA
+    color: #888
+    letter-spacing: .05rem
+
+    margin: 0 0 1rem 0
 
   &__title
     font-size: 4.8rem
-    line-height: 1.2
-    color: #8F57DD
+    line-height: 1.3
+    color: $colors.indigo
 
     @media screen and (max-width: 575px)
       font-size: 4rem

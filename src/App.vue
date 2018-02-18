@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div id="app" class="app">
     <router-view/>
   </div>
 </template>
@@ -13,13 +13,15 @@ export default {
 
 <style lang="stylus">
 
+@require './assets/styl/variables'
+
 html
   font-size: 62.5%
 
 body
   margin: 0
   display: flex
-  font: 400 1.4rem/1.4 'Whitney-Book', 'Helvetica Neue', Helvetica, Arial, sans-serif
+  font: 400 1.4rem/1.5 'Graphik', Helvetica, Arial, sans-serif
 *,
 *::after,
 *::before

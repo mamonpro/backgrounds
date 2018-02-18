@@ -1,9 +1,10 @@
 <template lang="pug">
-  .list
-    .list__item(v-for="(item, index) in images" :key="index")
-      a(:href="source(item.url)" target="_blank")
-        img.list__img(:src="source(item.url)")
-    .list__load
+  div
+    .list
+      .item.list__item(v-for="(item, index) in images.show" :key="index")
+        a.item__link(:href="source(item.url)" target="_blank")
+          img.item__img(:src="source(item.url)")
+    .list__load(v-if="images.show.length != images.all")
       .list__btn(@click="index = index + 1") Show More
 </template>
 
@@ -18,7 +19,10 @@ export default {
 
   computed: {
     images () {
-      return this.$store.state.images.slice(0, this.perPage * this.index)
+      return {
+        show: this.$store.state.images.slice(0, this.perPage * this.index),
+        all: this.$store.state.images.length
+      }
     }
   },
 
@@ -31,6 +35,9 @@ export default {
 </script>
 
 <style lang="stylus">
+
+@require './../assets/styl/variables'
+
 .list
   display: flex
   justify-content: space-between
@@ -40,20 +47,14 @@ export default {
   margin-right: -1.5rem
 
   &__item
-    width: (100% / 3)
-    padding: 0 1.5rem
+    width: 100%
     margin-bottom: 3rem
 
-    @media screen and (max-width: 700px)
+    @media screen and (min-width: $media.xs)
       width: (100% / 2)
 
-    @media screen and (max-width: 575px)
-      width: 100%
-
-  &__img
-    display: block
-    width: 100%
-    height: auto
+    @media screen and (min-width: $media.sm)
+      width: (100% / 3)
 
   &__load
     width: 100%
@@ -69,7 +70,49 @@ export default {
     font-weight: 400
     letter-spacing: .05rem
     color: #fff
-    background: #8f57dd
-    padding: 1rem 2rem
+    background: $colors.indigo
+    padding: 1.2rem 3rem 1rem 3rem
     cursor: pointer
+    border-radius: .3rem
+    transition: opacity .15s linear
+
+    &:hover
+      opacity: .8
+
+.item
+  padding: 0 1.5rem
+
+  &__link
+    position: relative
+    display: block
+    width: 100%
+    border-radius: .5rem
+    overflow: hidden
+    padding-bottom: 180%
+
+    &::before
+      content: ''
+      position absolute
+      top: 0
+      left: 0
+      right: 0
+      bottom: 0
+      background: transparent
+      transition: background .25s linear
+      z-index: 2
+
+    &:hover
+      &::before
+        background: rgba(#fff, .2)
+
+  &__img
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+    display: block
+    width: 100%
+    height: auto
+    z-index: 1
+
 </style>

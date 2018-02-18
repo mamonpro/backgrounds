@@ -1,5 +1,5 @@
 <template lang="pug">
-  .app
+  .container
     head-component
     list-component
 </template>
@@ -17,7 +17,7 @@ export default {
 </script>
 
 <style lang="stylus">
-.app
+.container
   display: flex
   flex-direction column
   justify-content: center
