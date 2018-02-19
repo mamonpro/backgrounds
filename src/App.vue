@@ -1,5 +1,5 @@
 <template lang="pug">
-  .app#app(:class="{ __night: night }")
+  .app#app
     .container
       .switch(@click="switchMode")
         .switch__icon
@@ -16,24 +16,29 @@ export default {
   name: 'App',
   data () {
     return {
-      night: false
+      dark: false
     }
   },
 
   beforeMount () {
-    this.night = this.loadMode()
+    this.dark = this.loadMode()
+
+    if (this.dark) {
+      document.querySelector('html').classList.add('__dark')
+    }
   },
 
   methods: {
     loadMode () {
-      if (localStorage.getItem('night')) {
-        return localStorage.getItem('night') === 'true'
+      if (localStorage.getItem('dark')) {
+        return localStorage.getItem('dark') === 'true'
       }
     },
 
     switchMode () {
-      this.night = !this.night
-      localStorage.setItem('night', this.night)
+      this.dark = !this.dark
+      localStorage.setItem('dark', this.dark)
+      document.querySelector('html').classList.toggle('__dark')
     }
   }
 }
@@ -45,11 +50,19 @@ export default {
 
   html
     font-size: 62.5%
+    transition: background $tr.time $tr.func
+
+    &.__dark
+      background: $colors.night
 
   body
     margin: 0
     display: flex
     font: 400 1.4rem/1.5 'Graphik', Helvetica, Arial, sans-serif
+    text-rendering: optimizeLegibility
+    -webkit-font-smoothing: antialiased
+    -moz-osx-font-smoothing: grayscale
+
   *,
   *::after,
   *::before
@@ -59,10 +72,9 @@ export default {
     width: 100%
 
   .app
-    transition: background $tr.time $tr.func
+    //
 
-  .__night
-    background: $colors.night
+  .__dark
 
     .switch
       &__icon
@@ -90,7 +102,7 @@ export default {
     transition: $tr.time $tr.func
 
     &:hover
-      opacity: .6
+      opacity: .5
 
     &__icon
 

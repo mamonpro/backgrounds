@@ -137,7 +137,7 @@ export default {
     height: auto
     z-index: 1
 
-.__night
+.__dark
 
   .list
     &__load

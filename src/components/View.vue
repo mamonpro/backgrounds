@@ -1,6 +1,6 @@
 <template lang="pug">
   .page
-    head-component
+    head-component(headline="Beautiful<br/>background<br/>for your iPhone.", back="true")
     .view
       .view__thumb
         img.item__img
