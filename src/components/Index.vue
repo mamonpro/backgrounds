@@ -1,5 +1,5 @@
 <template lang="pug">
-  .container
+  .page
     head-component
     list-component
 </template>
@@ -17,12 +17,5 @@ export default {
 </script>
 
 <style lang="stylus">
-.container
-  display: flex
-  flex-direction column
-  justify-content: center
-  width: 100%
-  max-width: 86rem
-  margin: 0 auto
-  padding: 0 1.5rem
+
 </style>

@@ -9,8 +9,10 @@
 
 @require './../assets/styl/variables'
 
-h1
-  margin: 0
+.__night
+  .head
+    &__name
+      color: $colors.white
 
 .head
   display: flex
@@ -27,7 +29,7 @@ h1
   &__name
     font-size: 1.6rem
     text-transform: uppercase
-    font-weight: 600
+    font-weight: 400
     color: #888
     letter-spacing: .05rem
 
@@ -37,6 +39,7 @@ h1
     font-size: 4.8rem
     line-height: 1.3
     color: $colors.indigo
+    margin: 0
 
     @media screen and (max-width: 575px)
       font-size: 4rem

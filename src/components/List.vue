@@ -108,6 +108,8 @@ export default {
     border-radius: .5rem
     overflow: hidden
     padding-bottom: 180%
+    box-shadow: 0 0 0 .2rem transparent
+    transition: $tr.time $tr.func
 
     &::before
       content: ''
@@ -133,5 +135,19 @@ export default {
     width: 100%
     height: auto
     z-index: 1
+
+.__night
+
+  .list
+    &__load
+      color: $colors.white
+
+  .item
+    &__link
+      &:hover
+        box-shadow: 0 0 0 .3rem $colors.indigo
+
+        &::before
+          display: none
 
 </style>
