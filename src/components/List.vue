@@ -2,7 +2,7 @@
   div
     .list
       .item.list__item(v-for="(item, index) in images.show", :key="index")
-        a.item__link(:href="source(item.url)", target="_blank")
+        a.item__link(:href="'/view/' + item.id")
           img.item__img(:src="source(item.url)")
     .list__load
       .list__btn(v-if="images.show.length != images.all", @click="index = index + 1, initScroll()") Show More
@@ -10,6 +10,7 @@
 </template>
 
 <script>
+
 export default {
   data () {
     return {
