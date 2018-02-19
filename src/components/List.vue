@@ -15,7 +15,7 @@ export default {
   data () {
     return {
       index: 1,
-      perPage: 9,
+      perPage: 8,
       element: null
     }
   },
@@ -74,7 +74,7 @@ export default {
       width: (100% / 2)
 
     @media screen and (min-width: $media.sm)
-      width: (100% / 3)
+      width: (100% / 4)
 
   &__load
     width: 100%
