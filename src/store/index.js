@@ -1,10 +1,12 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
+import { SET_DEVICE } from './mutation-types'
 
 Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
+    darkMode: false,
     images: [
       {
         id: 1,
@@ -216,12 +218,41 @@ export default new Vuex.Store({
         downloads: 482,
         url: '30.jpeg'
       }
+    ],
+    device: null,
+    devices: [
+      {
+        id: 1,
+        name: 'iPhone 5'
+      },
+      {
+        id: 2,
+        name: 'iPhone 6 / 7'
+      },
+      {
+        id: 3,
+        name: 'iPhone 6 Plus / 7 Plus'
+      },
+      {
+        id: 4,
+        name: 'iPhone X'
+      }
     ]
+  },
+
+  mutations: {
+    [SET_DEVICE] (state, id) {
+      state.device = id
+    }
   },
 
   getters: {
     getImageById: (state) => (id) => {
       return state.images.find(image => image.id === id)
+    },
+
+    getDeviceById: (state) => (id) => {
+      return state.devices.find(device => device.id === id)
     }
   }
 })
