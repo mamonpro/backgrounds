@@ -217,21 +217,301 @@ export default new Vuex.Store({
         view: 1230,
         downloads: 482,
         url: '30.jpeg'
+      },
+      {
+        id: 31,
+        likes: 10,
+        view: 1230,
+        downloads: 482,
+        url: '31.jpeg'
+      },
+      {
+        id: 32,
+        likes: 10,
+        view: 1230,
+        downloads: 482,
+        url: '32.jpeg'
+      },
+      {
+        id: 33,
+        likes: 10,
+        view: 1230,
+        downloads: 482,
+        url: '33.jpeg'
+      },
+      {
+        id: 34,
+        likes: 10,
+        view: 1230,
+        downloads: 482,
+        url: '34.jpeg'
+      },
+      {
+        id: 35,
+        likes: 10,
+        view: 1230,
+        downloads: 482,
+        url: '35.jpeg'
+      },
+      {
+        id: 36,
+        likes: 10,
+        view: 1230,
+        downloads: 482,
+        url: '36.jpeg'
+      },
+      {
+        id: 37,
+        likes: 10,
+        view: 1230,
+        downloads: 482,
+        url: '37.jpeg'
+      },
+      {
+        id: 38,
+        likes: 10,
+        view: 1230,
+        downloads: 482,
+        url: '38.jpeg'
+      },
+      {
+        id: 39,
+        likes: 10,
+        view: 1230,
+        downloads: 482,
+        url: '39.jpeg'
+      },
+      {
+        id: 40,
+        likes: 10,
+        view: 1230,
+        downloads: 482,
+        url: '40.jpeg'
+      },
+      {
+        id: 41,
+        likes: 10,
+        view: 1230,
+        downloads: 482,
+        url: '41.jpeg'
+      },
+      {
+        id: 42,
+        likes: 10,
+        view: 1230,
+        downloads: 482,
+        url: '42.jpeg'
+      },
+      {
+        id: 43,
+        likes: 10,
+        view: 1230,
+        downloads: 482,
+        url: '43.jpeg'
+      },
+      {
+        id: 44,
+        likes: 10,
+        view: 1230,
+        downloads: 482,
+        url: '44.jpeg'
+      },
+      {
+        id: 45,
+        likes: 10,
+        view: 1230,
+        downloads: 482,
+        url: '45.jpeg'
+      },
+      {
+        id: 46,
+        likes: 10,
+        view: 1230,
+        downloads: 482,
+        url: '46.jpeg'
+      },
+      {
+        id: 47,
+        likes: 10,
+        view: 1230,
+        downloads: 482,
+        url: '47.jpeg'
+      },
+      {
+        id: 48,
+        likes: 10,
+        view: 1230,
+        downloads: 482,
+        url: '48.jpeg'
+      },
+      {
+        id: 49,
+        likes: 10,
+        view: 1230,
+        downloads: 482,
+        url: '49.jpeg'
+      },
+      {
+        id: 50,
+        likes: 10,
+        view: 1230,
+        downloads: 482,
+        url: '50.jpeg'
+      },
+      {
+        id: 51,
+        likes: 10,
+        view: 1230,
+        downloads: 482,
+        url: '51.jpeg'
+      },
+      {
+        id: 52,
+        likes: 10,
+        view: 1230,
+        downloads: 482,
+        url: '52.jpeg'
+      },
+      {
+        id: 53,
+        likes: 10,
+        view: 1230,
+        downloads: 482,
+        url: '53.jpeg'
+      },
+      {
+        id: 54,
+        likes: 10,
+        view: 1230,
+        downloads: 482,
+        url: '54.jpeg'
+      },
+      {
+        id: 55,
+        likes: 10,
+        view: 1230,
+        downloads: 482,
+        url: '55.jpeg'
+      },
+      {
+        id: 56,
+        likes: 10,
+        view: 1230,
+        downloads: 482,
+        url: '56.jpeg'
+      },
+      {
+        id: 57,
+        likes: 10,
+        view: 1230,
+        downloads: 482,
+        url: '57.jpeg'
+      },
+      {
+        id: 58,
+        likes: 10,
+        view: 1230,
+        downloads: 482,
+        url: '58.jpeg'
+      },
+      {
+        id: 59,
+        likes: 10,
+        view: 1230,
+        downloads: 482,
+        url: '59.jpeg'
+      },
+      {
+        id: 60,
+        likes: 10,
+        view: 1230,
+        downloads: 482,
+        url: '60.jpeg'
+      },
+      {
+        id: 61,
+        likes: 10,
+        view: 1230,
+        downloads: 482,
+        url: '61.jpeg'
+      },
+      {
+        id: 62,
+        likes: 10,
+        view: 1230,
+        downloads: 482,
+        url: '62.jpeg'
+      },
+      {
+        id: 63,
+        likes: 10,
+        view: 1230,
+        downloads: 482,
+        url: '63.jpeg'
+      },
+      {
+        id: 64,
+        likes: 10,
+        view: 1230,
+        downloads: 482,
+        url: '64.jpeg'
+      },
+      {
+        id: 65,
+        likes: 10,
+        view: 1230,
+        downloads: 482,
+        url: '65.jpeg'
+      },
+      {
+        id: 66,
+        likes: 10,
+        view: 1230,
+        downloads: 482,
+        url: '66.jpeg'
+      },
+      {
+        id: 67,
+        likes: 10,
+        view: 1230,
+        downloads: 482,
+        url: '67.jpeg'
+      },
+      {
+        id: 68,
+        likes: 10,
+        view: 1230,
+        downloads: 482,
+        url: '68.jpeg'
+      },
+      {
+        id: 69,
+        likes: 10,
+        view: 1230,
+        downloads: 482,
+        url: '69.jpeg'
+      },
+      {
+        id: 70,
+        likes: 10,
+        view: 1230,
+        downloads: 482,
+        url: '70.jpeg'
       }
     ],
     device: null,
     devices: [
       {
         id: 1,
-        name: 'iPhone 5'
+        name: 'iPhone SE'
       },
       {
         id: 2,
-        name: 'iPhone 6 / 7'
+        name: 'iPhone 8'
       },
       {
         id: 3,
-        name: 'iPhone 6 Plus / 7 Plus'
+        name: 'iPhone 8 Plus'
       },
       {
         id: 4,

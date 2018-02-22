@@ -8,18 +8,21 @@
             path(stroke='#000000', stroke-width='2', d='M19.4673411,11.2326905 C15.0544059,13.3111479 12,17.7988766 12,23 C12,30.1797017 17.8202983,36 25,36 C30.20282,36 34.6917798,32.9436011 36.7693427,28.5283399 C32.2227119,30.5208702 26.4945368,29.4674838 22.5123344,25.4852814 C18.5314216,21.5043685 17.4774282,15.7786137 19.4673411,11.2326905 Z', stroke-linecap='round', stroke-linejoin='round')
     .container
       router-view
+    active-device
     layer
 </template>
 
 <script>
 
 import Layer from '@/components/Layer'
+import ActiveDevice from '@/components/ActiveDevice'
 
 export default {
   name: 'App',
 
   components: {
-    Layer
+    Layer,
+    ActiveDevice
   },
 
   data () {

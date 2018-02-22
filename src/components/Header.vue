@@ -1,12 +1,12 @@
 <template lang="pug">
   header.head
     .head__inner
-      a.head__logo(href="/")
+      router-link.head__logo(to="/")
         .head__back(v-if="back")
           svg(xmlns='http://www.w3.org/2000/svg', width='24', height='24', viewbox='0 0 24 24')
             polygon(points='6.3,12.8 20.9,12.8 20.9,11.2 6.3,11.2 10.2,7.2 9,6 3.1,12 9,18 10.2,16.8 ')
         h6.head__name bgrnds
-      h1.head__title(v-html="headline")
+      h1.head__title Beautiful<br/>backgrounds<br/>for your {{ iphone }}
 </template>
 
 <script>
@@ -15,11 +15,21 @@ export default {
   props: {
     headline: {
       type: String,
-      default: 'Beautiful<br/>backgrounds<br/>for your iPhone.'
+      default: `Beautiful<br/>backgrounds<br/>for your iPhone.`
     },
     back: {
       type: Boolean,
       default: false
+    }
+  },
+
+  computed: {
+    iphone () {
+      if (this.$store.state.device) {
+        return this.$store.getters.getDeviceById(this.$store.state.device).name
+      } else {
+        return 'iPhone.'
+      }
     }
   }
 }
